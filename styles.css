@@ -93,3 +93,45 @@ button {
     top: 0;
   }
 }
+
+.a4 {
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm;
+  box-sizing: border-box;
+  background: white;
+  margin: auto;
+}
+
+.border {
+  padding: 1.5rem;
+}
+
+.border.double {
+  border: 15px double #5a005a;
+}
+
+.border.solid {
+  border: 15px solid #5a005a;
+}
+
+.border.dashed {
+  border: 15px dashed #5a005a;
+}
+
+.border.dotted {
+  border: 15px dotted #5a005a;
+}
+
+.circular-text svg {
+  width: 100%;
+  height: 100px;
+  margin-bottom: -30px;
+}
+
+.circular-text text {
+  font-size: 18px;
+  font-weight: bold;
+  fill: #5a005a;
+  font-family: 'Times New Roman', serif;
+}

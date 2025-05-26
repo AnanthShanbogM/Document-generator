@@ -23,16 +23,32 @@
       <input placeholder="Submitted By (Student Name)" id="byName">
       <input placeholder="Class & Sem" id="byClass">
       <input placeholder="Roll No" id="rollNo">
+      <label for="borderStyle">Choose Border Style:</label>
+      <select id="borderStyle">
+        <option value="double">Double</option>
+        <option value="solid">Solid</option>
+        <option value="dashed">Dashed</option>
+        <option value="dotted">Dotted</option>
+      </select>
       <button type="submit">Generate</button>
     </form>
 
     <div id="outputSection" style="display:none;">
-      <div id="frontPage" class="front-page">
-        <div class="border">
+      <div id="frontPage" class="front-page a4">
+        <div id="borderContainer" class="border double">
           <div class="content">
-            <img id="logo" src="logo.png" alt="College Logo" class="logo">
+            <div class="circular-text">
+              <svg viewBox="0 0 500 200">
+                <path id="curve" fill="transparent" d="M50,100 A200,200 0 0,1 450,100" />
+                <text>
+                  <textPath href="#curve" startOffset="50%" text-anchor="middle" id="collegeCurveText">
+                    SHARADA FIRST GRADE COLLEGE FOR WOMEN
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+            <img id="logo" src="" alt="College Logo" class="logo">
             <h3 id="univText">BANGALORE UNIVERSITY NORTH</h3>
-            <h2 id="collegeText">SHARADA FIRST GRADE COLLEGE FOR WOMEN</h2>
             <p id="locationText">MUTHYALPET MULBAGAL-563131</p>
             <p id="yearText" class="red">2024-2025</p>
             <h3><span id="semText" class="green">FOURTH SEMESTER</span></h3>

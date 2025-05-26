@@ -1,3 +1,14 @@
+document.getElementById('logoUpload').addEventListener('change', function(e) {
+  const logoInput = e.target;
+  if (logoInput.files && logoInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      document.getElementById('logo').src = evt.target.result;
+    };
+    reader.readAsDataURL(logoInput.files[0]);
+  }
+});
+
 document.getElementById('form').addEventListener('submit', function(e) {
   e.preventDefault();
   const get = id => document.getElementById(id).value;
@@ -15,15 +26,6 @@ document.getElementById('form').addEventListener('submit', function(e) {
   document.getElementById('byClassText').textContent = get('byClass');
   document.getElementById('rollNoText').textContent = get('rollNo');
 
-  const logoInput = document.getElementById('logoUpload');
-  if (logoInput.files && logoInput.files[0]) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      document.getElementById('logo').src = e.target.result;
-    };
-    reader.readAsDataURL(logoInput.files[0]);
-  }
-
   document.getElementById('outputSection').style.display = 'block';
 });
 
@@ -35,3 +37,9 @@ function downloadPDF() {
   const element = document.getElementById('frontPage');
   html2pdf().from(element).save('Assignment_Front_Page.pdf');
 }
+
+document.getElementById('borderStyle').addEventListener('change', function() {
+  const style = this.value;
+  const container = document.getElementById('borderContainer');
+  container.className = 'border ' + style;
+});
