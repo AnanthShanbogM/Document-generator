@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment Front Page Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Assignment Front Page Generator</h2>
+    <form id="form">
+      <input placeholder="University Name" id="university">
+      <input placeholder="College Name" id="college">
+      <input placeholder="Location & Pin" id="location">
+      <input placeholder="Academic Year" id="year">
+      <input placeholder="Semester" id="semester">
+      <input placeholder="Subject" id="subject">
+      <input placeholder="Topic" id="topic">
+      <input placeholder="Submitted To (Name)" id="toName">
+      <input placeholder="Designation" id="toDesig">
+      <input placeholder="Submitted By (Student Name)" id="byName">
+      <input placeholder="Class & Sem" id="byClass">
+      <input placeholder="Roll No" id="rollNo">
+      <button type="submit">Generate</button>
+    </form>
+
+    <div id="outputSection" style="display:none;">
+      <div id="frontPage" class="front-page">
+        <div class="border">
+          <div class="content">
+            <img id="logo" src="logo.png" alt="College Logo" class="logo">
+            <h3 id="univText">BANGALORE UNIVERSITY NORTH</h3>
+            <h2 id="collegeText">SHARADA FIRST GRADE COLLEGE FOR WOMEN</h2>
+            <p id="locationText">MUTHYALPET MULBAGAL-563131</p>
+            <p id="yearText" class="red">2024-2025</p>
+            <h3><span id="semText" class="green">FOURTH SEMESTER</span></h3>
+            <h1 class="assignment">ASSIGNMENT</h1>
+            <p><strong>SUB:</strong> <span id="subText" class="red">Business Regulatory Framework</span></p>
+            <p><strong>TOPIC:</strong> <span id="topicText" class="quote">"INTELLECTUAL PROPERTY RIGHTS"</span></p>
+            <div class="footer">
+              <div class="left">
+                <p><strong>SUBMITTED TO:</strong></p>
+                <p id="toNameText">Jhansi. R M.COM., B.ED</p>
+                <p id="toDesigText">Assistant Professor</p>
+                <p>Sharada First Grade College<br>Women, Mulbagal</p>
+              </div>
+              <div class="right">
+                <p><strong>SUBMITTED BY:</strong></p>
+                <p id="byNameText">Varshini</p>
+                <p id="byClassText">Second B.Com 4th Sem</p>
+                <p><strong>Roll No:</strong> <span id="rollNoText">U19DK23C0024</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button onclick="printPage()">🖨️ Print</button>
+          <button onclick="downloadPDF()">⬇️ Download PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
