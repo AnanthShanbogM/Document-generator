@@ -15,6 +15,15 @@ document.getElementById('form').addEventListener('submit', function(e) {
   document.getElementById('byClassText').textContent = get('byClass');
   document.getElementById('rollNoText').textContent = get('rollNo');
 
+  const logoInput = document.getElementById('logoUpload');
+  if (logoInput.files && logoInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('logo').src = e.target.result;
+    };
+    reader.readAsDataURL(logoInput.files[0]);
+  }
+
   document.getElementById('outputSection').style.display = 'block';
 });
 
